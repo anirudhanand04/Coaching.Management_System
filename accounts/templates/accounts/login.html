@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+        <h2>User is already logged in!</h2>
+        <script>
+            window.location="/";
+        </script>
+    {% else %}
+        <h2>Login</h2>
+        <form action="{% url 'accounts:login' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <label for="User">User Type</label>
+            <select name="usertype" id="usertype">
+                <option value="User">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="admin">Admin</option>
+            </select>
+            <input type="submit" value="Login">
+        </form>
+    {% endif %}
+{% endblock %}

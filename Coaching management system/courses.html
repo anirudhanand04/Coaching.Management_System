@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Enrolled Courses</title>
+    
+        <!-- google fonts cdn link  -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="style.css">
+    
+    </head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Time Table</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="testing.html" class="mr-5 hover:text-gray-900">Enrolled Courses</a>
+            <a href="Feedback.html" class="mr-5 hover:text-gray-900">Feedback</a>
+            <a href="SignOut.html" class="mr-5 hover:text-gray-900">Logout</a>
+        
+          <!-- <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button -->
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    <section class="course" id="course"></section>
+    <h1 class="heading">Your Courses this Semester</h1>    
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="ml.png" alt="">
+        <!-- <h3 class="price"></h3> -->
+        <div class="content">
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div> -->
+            <a href="#" class="title">Machine Learning</a>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p> -->
+            <div class="info">
+                <h3> <i class="far fa-clock"></i> 40 hours </h3>
+                <h3> <i class="far fa-calendar-alt"></i> 6 months </h3>
+                <h3> <i class="fas fa-book"></i> 12 modules </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="Probabilty.jpg" alt="">
+        <!-- <h3 class="price">$50</h3> -->
+        <div class="content">
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div> -->
+            <a href="#" class="title">Probabilty and Statistics</a>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p> -->
+            <div class="info">
+                <h3> <i class="far fa-clock"></i> 40 hours </h3>
+                <h3> <i class="far fa-calendar-alt"></i> 6 months </h3>
+                <h3> <i class="fas fa-book"></i> 16 modules </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="networks.jpg" alt="">
+        <!-- <h3 class="price">$50</h3> -->
+        <div class="content">
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div> -->
+            <a href="#" class="title">Computer Networks</a>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p> -->
+            <div class="info">
+                <h3> <i class="far fa-clock"></i> 25 hours </h3>
+                <h3> <i class="far fa-calendar-alt"></i> 6 months </h3>
+                <h3> <i class="fas fa-book"></i> 8 modules </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="se.jpg" alt="">
+        <!-- <h3 class="price">$50</h3> -->
+        <div class="content">
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div> -->
+            <a href="#" class="title">Software Engineering</a>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p> -->
+            <div class="info">
+                <h3> <i class="far fa-clock"></i> 32 hours </h3>
+                <h3> <i class="far fa-calendar-alt"></i> 6 months </h3>
+                <h3> <i class="fas fa-book"></i> 10 modules </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="ds.png" alt="">
+        <!-- <h3 class="price">$50</h3> -->
+        <div class="content">
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div> -->
+            <a href="#" class="title">Data Science</a>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p> -->
+            <div class="info">
+                <h3> <i class="far fa-clock"></i> 40 hours </h3>
+                <h3> <i class="far fa-calendar-alt"></i> 6 months </h3>
+                <h3> <i class="fas fa-book"></i> 14 modules </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="dsalgo.jpg" alt="">
+        <!-- <h3 class="price">$50</h3> -->
+         <div class="content">
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div> --> 
+            <a href="datst.html" class="title">Data Structures and Algorithms</a>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p> -->
+            <div class="info">
+                <h3> <i class="far fa-clock"></i> 40 hours </h3>
+                <h3> <i class="far fa-calendar-alt"></i> 6 months </h3>
+                <h3> <i class="fas fa-book"></i> 17 modules </h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</section>
+</body>
+</html>

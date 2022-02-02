@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Online Study Website Design Tutorial</title>
+    <!-- google fonts cdn link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+   
+<!-- header section starts  -->
+<header>
+    <div id="menu" class="fas fa-bars"></div>
+    <a href="#" class="logo"><i class="fas fa-user-graduate"></i>LOGO</a>
+    {% block navbar %}
+    {% endblock %}
+    {% if user.is_authenticated %}
+    <form action="{% url 'accounts:logout' %}" method="POST">
+        {% csrf_token %}
+        {{ user.username }}
+        <button type="submit">Logout</button>
+    </form>
+    {% else %}
+        <a id="login" class="fas fa-user-circle" href='/accounts/login/'></a>
+    {% endif %}
+</header>
+<!-- header section ends -->
+
+<!-- Start - Main Body Section -->
+<div class="myform">
+{% block body %}
+{% endblock %}
+</div>
+<!-- End - Main Body Section -->
+
+<!-- footer section starts  -->
+
+<div class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">India</a>
+            <a href="#">USA</a>
+            <a href="#">france</a>
+            <a href="#">russia</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <!--a href="#">about</a>
+            <a href="#">course</a>
+            <a href="#">teachers</a>
+            <a href="#">contact</a-->
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-map-marker-alt"></i> mumbai, india 400104. </p>
+            <p> <i class="fas fa-envelope"></i> example@gmail.com </p>
+            <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+        </div>
+    </div>
+    <h1 class="credit">created by <a href="#">mr. web designer</a> all rights reserved. </h1>
+</div>
+<!-- footer section ends -->
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+</body>
+</html>

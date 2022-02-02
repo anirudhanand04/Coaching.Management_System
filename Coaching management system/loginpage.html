@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coaching Management System</title>
+    
+    <link rel="stylesheet" href="style_3.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <div class="full-page">
+        <div class="sub-page">
+            <div class="navigation-bar">
+                <div class="logo">
+                    <a >Coaching Management System</a>
+                </div>
+                <nav>
+                    <ul id='MenuItems'>
+                        <!-- <li><a href='#'>Home</a></li>
+                        <li><a href='#'>Contact</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <div class="form-box">
+                        <div class="form">
+                            <form class="login-form">
+                                <center><h1 class="main-heading">Login Form</h1></center>
+                             
+                                <!-- <label for="User">User Type</label> -->
+
+<select name="user" id="user_id">
+    <option value="user">User Type</option>
+  <option value="User">Student</option>
+  <option value="teacher">Teacher</option>
+  <option value="admin">Admin</option>
+</select>
+<br>                                
+<!-- <input type="checkbox"placeholder="User Type"/> -->
+				                <input type="text"placeholder="User Id"/>
+				                <input type="password"placeholder="Password"/>
+                            </form>
+                            <button id="myButton" class="float-left submit-button" >Submit</button>
+
+                            <script type="text/javascript">
+                                document.getElementById("myButton").onclick = function () {
+                                    try{
+    // const userCredential = await firebase.auth().signInWithEmailAndPassword(data.email, data.password);
+    // let uid = userCredential.user.uid;
+    // var document = await firebase.firestore().collection("users").doc(uid).get();
+    // //document is a DocumentSnapshot, we can call the get() method
+    var box = document.getElementById('user_id');
+
+conceptName = box.options[box.selectedIndex].text;
+    if (conceptName == 'Teacher'){
+       window.location.href = "Teacher's/index.html"; 
+    }
+    else if (conceptName == 'Student') {
+       window.location.href = "index.html";  
+    }    
+    else if (conceptName == 'Admin') {
+       window.location.href = "Admin/index.html";  
+    }              
+ else{
+    console.log("Login Failed!", err);
+    alert("Login Failed!", err);
+ }
+                             }
+                             catch{
+
+                             }
+                            };
+                            </script>
+                            <form>
+				                <p class="message"><br>Forgot Password            <a href="#">        Send OTP</a></p>
+				            </form>
+                            <form class="register-form">
+                                <center><h1 class="main-heading">Register Form</h1></center>
+				                <input type="text" placeholder="user name"/>
+				                <input type="text" placeholder="email-id"/>
+				                <input type="password" placeholder="password"/>
+				                <button>REGISTER</button>
+				                <p class="message">Already Registered?<a href="#">Login</a>
+				                </p>
+				            </form>
+			             </div>
+	                </div>
+                </div>
+                <div class="col-1">
+                    <p class='defination'></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+    </script> -->
+    
+</body>
+</html>
